@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Pasandida Ladki 💗</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffb6c1,#ffd6e7);overflow:hidden;display:flex;align-items:center;justify-content:center;height:100vh}
+#hearts span{position:absolute;bottom:-40px;animation:up linear infinite;font-size:22px}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(-110vh)}}
+.card,.letter{background:rgba(255,255,255,.9);padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.15);text-align:center;max-width:700px;width:90%}
+button{padding:14px 28px;border:none;border-radius:30px;background:#ff5c8a;color:#fff;font-size:18px;cursor:pointer}
+.letter{display:none}
+textarea{width:100%;height:220px;border-radius:10px;border:1px solid #ddd;padding:12px;font-size:16px}
+.small{margin-top:20px;color:#cc3366;font-weight:bold}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<div class="card" id="home">
+<h1>For My Pasandida Ladki 💗</h1>
+<p>There's a little letter waiting only for you.</p>
+<button onclick="openLetter()">💌 Open Your Letter</button>
+</div>
+
+<div class="letter" id="letter">
+<h2>To My Gudda 💗🫂</h2>
+<p><b>Write your own heartfelt paragraph below:</b></p>
+<textarea placeholder="Type your message here..."></textarea>
+<p class="small">I'm Sorry. 💗🫂</p>
+<p>With all my love ❤️</p>
+</div>
+
+<script>
+function openLetter(){
+document.getElementById('home').style.display='none';
+document.getElementById('letter').style.display='block';
+}
+const c=document.getElementById('hearts');
+for(let i=0;i<35;i++){
+ let s=document.createElement('span');
+ s.innerHTML='💗';
+ s.style.left=Math.random()*100+'vw';
+ s.style.animationDuration=(5+Math.random()*5)+'s';
+ s.style.animationDelay=(-Math.random()*8)+'s';
+ c.appendChild(s);
+}
+</script>
+</body>
+</html>
